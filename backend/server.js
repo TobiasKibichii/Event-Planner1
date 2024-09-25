@@ -22,6 +22,7 @@ db.connect((error) => {
     }else{
         console.log('mysql connected');
     }
+    
 });
 
 app.get('/', (req, res) => {
@@ -35,7 +36,8 @@ app.listen(PORT, ()=> {
 
 app.post('/register', (req, res) => {
     const { email, password } = req.body;
-    const query = "INSERT INTO users (email, password) VALUES(?, ?)";
+    const query = "INSERT INTO userz (email, password) VALUES(?, ?)";
+    
     db.query(query, [email, password], (err, result) => {
         if (err) {
             return res.status(500).json({ error: 'db error' });
@@ -46,7 +48,7 @@ app.post('/register', (req, res) => {
 
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
-    const query = "SELECT * FROM users WHERE email = ? AND password = ?";
+    const query = "SELECT * FROM userz WHERE email = ? AND password = ?";
     db.query(query, [email, password], (err, result) => {
         if(err){
             return res.status(500).json({ error: 'db error' });
