@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import axios from "axios";  
-import '../../components/form.css';
+import axios from "axios";
+//import '../../components/form.css';
 
 export const CustomerForm = ({ userAccount }) => {
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
   const [contact, setContact] = useState("")
   const [gender, setGender] = useState("male");
 
@@ -30,11 +30,11 @@ export const CustomerForm = ({ userAccount }) => {
     }
   };
 
-  
+
   return (
-    <div id="app">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="firstname">First Name*</label>
+    <div id="app" className="container text-sm border-2 border-red-500">
+      <form onSubmit={handleSubmit} className="container mx-auto flex flex-col">
+        <label htmlFor="firstname">First Name</label>
         <input
           type="text"
           name="firstname"

@@ -1,0 +1,8 @@
+# Frontend React Requirements
+react==18.2.0               # Core React library
+react-dom==18.2.0           # React DOM bindings for the browser
+react-router-dom==6.15.0    # Routing library for navigation
+# react-hook-form==7.45.0     # Form handling library
+# react-icons==4.11.0         # Icon library for React
+tailwindcss==3.3.3          # Utility-first CSS framework
+axios==1.5.0                # Promise-based HTTP client

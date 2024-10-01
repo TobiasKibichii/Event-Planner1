@@ -6,13 +6,11 @@ export const Register = () => {
   const [userAccount, setUserAccount] = useState("customer");
 
   const handleAccountChange = (event) => {
-    setUserAccount(event.target.value); 
-
+    setUserAccount(event.target.value);
   };
 
-
   return (
-    <div>
+    <div className="flex flex-col gap-2 text-sm mx-auto">
       <h1>Create Your Account</h1>
       <select
         name="useraccount"
