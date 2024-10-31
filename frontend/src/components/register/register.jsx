@@ -10,7 +10,7 @@ export const Register = () => {
   };
 
   return (
-    <div className="flex flex-col gap-2 text-sm mx-auto">
+    <div className="flex flex-col gap-2 text-sm mx-auto px-2">
       <h1>Create Your Account</h1>
       <select
         name="useraccount"
