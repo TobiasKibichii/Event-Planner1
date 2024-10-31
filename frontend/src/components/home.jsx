@@ -1,47 +1,62 @@
-import React, { useState } from "react";
-import { Login } from "./login";
-//import { Navbar } from "./Navbar";
-import { Register } from "./register/register";
+import { Navbar } from "./Navbar";
+import "../index.css";
+import { FaFire } from "react-icons/fa";
 
 export const Home = () => {
-  const [showForm, setShowForm] = useState(null);
-
-  const toggleForm = (formType) => {
-    setShowForm((prev) => (prev === formType ? null : formType));
-  };
-
   function InfoText() {
     return (
-      <div className="bg-green-300 opacity-70 w-[90%] text-sm px-4 py-6 rounded-r-2xl shadow-xl shadow-slate-900 ">
-        <p className="text-black font-semibold">
+      <div className="info-text">
+        <h2>
+          We are globally available <FaFire className="fire-icon" />{" "}
+        </h2>
+        <h1>Curated Comforts at Your Fingertips</h1>
+        <p>
           {" "}
-          We responsible for organizing and coordinating various aspects of events,
-          such as <i> <b>weddings, conferences, and parties</b></i>. They manage logistics,
-          including venue selection, catering, and entertainment, ensuring that
-          everything runs smoothly. .{" "}
+          We responsible for organizing and coordinating various aspects of
+          events, such as{" "}
+          <i>
+            {" "}
+            <b>weddings, conferences, and parties</b>
+          </i>
+          . They manage logistics, including venue selection, catering, and
+          entertainment, ensuring that everything runs smoothly. .{" "}
         </p>
+      </div>
+    );
+  }
+  function Ad() {
+    return (
+      <div className="ad-wrapper">
+        <h3><span>Approved</span></h3>
+        <h2>Offer Just for You!</h2>
+        <p>Don’t miss out on our limited-time discounts on premium products.</p>
+        <button>Go Offer!</button>
       </div>
     );
   }
 
   return (
-    <div className="container bg-homepage_bg h-screen mx-auto">
-      <h1 className="text-white font-extrabold text-xl">
-        CANET EVENT ALLOCATORS
-      </h1>
-
-      <div className="w-full flex flex-row gap-4 justify-end text-sm text-white py-6">
-        <button onClick={() => toggleForm("login")} className="bg-green-500 opacity-80 py-[6px] px-3 rounded-tr-2xl rounded-bl-2xl shadow-white shadow-lg">
-          {showForm === "login" ? "Hide Login" : "Login"}
-        </button>
-
-        <button onClick={() => toggleForm("register")} className="bg-green-500 opacity-80 py-[6px] px-3 rounded-tr-2xl rounded-bl-2xl shadow-white shadow-lg" >
-          {showForm === "register" ? "Hide Register" : "Register"}
-        </button>
+    <div className="home-container">
+      <Navbar />
+      <div className="home-display">
+        <div className="text">
+          <InfoText />
+        </div>
+        <div className="image">
+          <Ad />
+        </div>
       </div>
+      <InfoText />
+      <InfoText />
 
-      {showForm === "login" && <Login />}
-      {showForm === "register" && <Register />}
+      <div class="relative p-6 max-w-md mx-auto bg-white rounded-lg shadow-lg border border-gray-200">
+  <h3 class="text-xl font-bold text-gray-800 mb-2">Exclusive Offer Just for You!</h3>
+  <p class="text-gray-600 mb-4">Get the latest in comfort and style. Don’t miss out on our limited-time discounts on premium products.</p>
+
+  <a href="#" class="inline-block px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 font-semibold text-center">Shop Now</a>
+
+  <span class="absolute top-4 right-4 bg-yellow-400 text-gray-800 font-semibold px-2 py-1 rounded text-xs">Sponsored</span>
+</div>
 
     </div>
   );

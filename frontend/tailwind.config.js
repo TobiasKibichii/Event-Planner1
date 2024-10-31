@@ -8,6 +8,7 @@ export default {
     extend: {
       backgroundImage:{
         'homepage_bg':"url('./components/images/homepage_image.jpg')",
+        'home_display':"url('./components/images/attracter1.jpg')",
       }
     },
   },

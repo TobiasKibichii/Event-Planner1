@@ -1,3 +1,133 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar{
+    @apply container bg-white text-black;
+    @apply flex flex-col justify-center gap-2 fixed w-screen top-0 mx-auto;
+}
+.top-bar{
+    @apply flex justify-between items-center px-1 h-fit
+}
+.top-bar .title{
+    @apply w-[10rem] text-center bg-transparent
+}
+.top-bar .links{
+    @apply flex gap-2 space-x-4
+}
+.links li{
+    @apply font-light relative inline-block border-b-[1px] hover:border-black transition-all duration-300;
+}
+.dropd{
+    @apply relative inline-block
+}
+.dropd-list{
+    @apply absolute left-0 bg-white px-2 shadow-lg z-50
+}
+.dropd-list li{
+    @apply cursor-pointer
+}
+.dropd span{
+    @apply w-full h-full flex justify-between gap-2 items-center
+}
+.dropd span:hover{
+    @apply cursor-pointer
+}
+.top-bar .cart-profile{
+    @apply flex space-x-5 px-3
+}
+.cart-profile span{
+    @apply cursor-pointer
+}
+.cart{
+    @apply relative
+}
+.cart p{
+    @apply w-5 absolute -mt-8 -ml-5 text-sm bg-black text-white h-fit
+}
+.bottom-bar{
+    @apply flex justify-end px-2 items-center gap-4
+}
+.search{
+    @apply flex gap-2 justify-center items-center
+}
+.search input{
+    @apply w-full h-[2rem] border-[1px] border-black rounded-md;
+    @apply outline-none px-2 shadow-xl
+}
+.search-icon{
+    @apply cursor-pointer w-6 h-6 shadow-xl hover:text-slate-600 transition-all duration-300
+}
+.sign-btns{
+    @apply flex gap-2 justify-center items-center
+}
+.sign-btns button{
+    @apply w-fit h-[2rem] px-2 py-0 rounded-md text-center border-[1px] border-black;
+    @apply hover:bg-black hover:text-white shadow-xl transition-all ease-in-out duration-300
+}
+.login-form{
+    @apply sm:w-fit sm:h-fit py-7 px-3 mx-auto rounded-2xl shadow-green-500 shadow-lg;
+    @apply text-sm flex flex-col gap-3 bg-slate-500 opacity-80;
+    @apply fixed inset-0 z-50 top-0 bottom-0 left-0 right-0 ;
+}
+.login-form h1{
+    @apply text-3xl font-bold text-center text-white;
+}
+.login-form input{
+    @apply w-full p-2 text-sm text-gray-700 bg-gray-100 rounded-lg;
+    @apply shadow-2xl outline-1 outline-green-500;
+}
+.login-form select{
+    @apply w-full p-2 text-sm text-gray-700 bg-gray-100 rounded-lg;
+    @apply outline-1 outline-green-500;
+}
+.login-form button{
+    @apply w-full p-2 text-sm text-white bg-green-500 rounded-lg;
+}
+.home-container{
+    @apply container w-full h-screen mx-auto pt-[9rem]
+}
+.home-display{
+    @apply w-full h-4/5 flex justify-around
+}
+.text{
+    @apply w-2/5 flex justify-center items-center font-sans
+}
+.info-text{
+    @apply w-fit flex flex-col space-y-6 items-center
+}
+.info-text h2{
+    @apply flex gap-1 items-center text-sm
+}
+.info-text h1{
+    @apply uppercase font-extrabold text-3xl w-2/3 text-center
+}
+.info-text p{
+    @apply text-sm text-gray-600
+}
+.fire-icon{
+    @apply text-yellow-500
+}
+.image{
+    @apply bg-home_display bg-cover bg-center relative;
+    @apply w-2/5 h-full -z-20;
+}
+.ad-wrapper{
+    @apply flex flex-col w-fit bg-white text-sm rounded-lg p-2;
+    @apply shadow-md shadow-gray-500 absolute left-0 transform -translate-y-1/4 -translate-x-20
+}
+.ad-wrapper h3{
+    @apply flex justify-end items-end text-end
+}
+.ad-wrapper h3 span{
+    @apply bg-yellow-300 text-black py-1 px-2 rounded-md;
+}
+.ad-wrapper h2{
+    @apply font-bold
+}
+.ad-wrapper p{
+    @apply text-[12px]
+}
+.ad-wrapper button{
+    @apply w-full p-1 text-sm text-white bg-green-500 hover:bg-green-700 rounded-lg;
+}

@@ -7,7 +7,6 @@ export const CustomerForm = ({ userAccount }) => {
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const [contact, setContact] = useState("");
   const [gender, setGender] = useState("");
 
@@ -38,7 +37,6 @@ export const CustomerForm = ({ userAccount }) => {
         onSubmit={handleSubmit}
         className="container mx-auto flex flex-col gap-2"
       >
-
         <label htmlFor="firstname">First Name</label>
         <input
           type="text"
