@@ -46,17 +46,7 @@ export const Home = () => {
           <Ad />
         </div>
       </div>
-      <InfoText />
-      <InfoText />
 
-      <div class="relative p-6 max-w-md mx-auto bg-white rounded-lg shadow-lg border border-gray-200">
-  <h3 class="text-xl font-bold text-gray-800 mb-2">Exclusive Offer Just for You!</h3>
-  <p class="text-gray-600 mb-4">Get the latest in comfort and style. Don’t miss out on our limited-time discounts on premium products.</p>
-
-  <a href="#" class="inline-block px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 font-semibold text-center">Shop Now</a>
-
-  <span class="absolute top-4 right-4 bg-yellow-400 text-gray-800 font-semibold px-2 py-1 rounded text-xs">Sponsored</span>
-</div>
 
     </div>
   );
